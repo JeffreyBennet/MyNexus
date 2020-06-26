@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78DBA20E3E360ADF8220D43D /* Pods_MyNexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */; };
+		AA9138B124A28C9C005E3AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B024A28C9C005E3AFA /* AppDelegate.swift */; };
+		AA9138B324A28C9C005E3AFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */; };
+		AA9138B524A28C9C005E3AFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B424A28C9C005E3AFA /* ViewController.swift */; };
+		AA9138B824A28C9C005E3AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9138B624A28C9C005E3AFA /* Main.storyboard */; };
+		AA9138BA24A28CA0005E3AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9138B924A28CA0005E3AFA /* Assets.xcassets */; };
+		AA9138BD24A28CA0005E3AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9138BB24A28CA0005E3AFA /* LaunchScreen.storyboard */; };
+		AA9138CA24A2977A005E3AFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138C924A2977A005E3AFA /* LoginViewController.swift */; };
+		AA9138CC24A2978D005E3AFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138CB24A2978D005E3AFA /* SignUpViewController.swift */; };
+		AA9138D124A297D6005E3AFA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138D024A297D6005E3AFA /* SettingsViewController.swift */; };
+		AA9138D324A297F0005E3AFA /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138D224A297F0005E3AFA /* AccountSettingsViewController.swift */; };
+		AA9138D524A297FF005E3AFA /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138D424A297FF005E3AFA /* ChangePasswordViewController.swift */; };
+		AA9138D724A29811005E3AFA /* ConfirmDeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138D624A29811005E3AFA /* ConfirmDeletionViewController.swift */; };
+		AA9138D924A298FD005E3AFA /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138D824A298FD005E3AFA /* PushNotificationManager.swift */; };
+		AA9138E624A2997E005E3AFA /* AssignmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9138DC24A2997C005E3AFA /* AssignmentCell.xib */; };
+		AA9138E724A2997E005E3AFA /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138DD24A2997C005E3AFA /* AssignmentCell.swift */; };
+		AA9138E824A2997E005E3AFA /* JoinedClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9138DE24A2997C005E3AFA /* JoinedClassCell.xib */; };
+		AA9138E924A2997E005E3AFA /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9138DF24A2997C005E3AFA /* MessageCell.xib */; };
+		AA9138EA24A2997E005E3AFA /* JoinedClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138E024A2997D005E3AFA /* JoinedClassCell.swift */; };
+		AA9138EB24A2997E005E3AFA /* OwnedClasssesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9138E124A2997D005E3AFA /* OwnedClasssesCell.xib */; };
+		AA9138EC24A2997E005E3AFA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138E224A2997D005E3AFA /* MessageCell.swift */; };
+		AA9138ED24A2997E005E3AFA /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9138E324A2997D005E3AFA /* PeopleCell.xib */; };
+		AA9138EE24A2997E005E3AFA /* OwnedClasssesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138E424A2997E005E3AFA /* OwnedClasssesCell.swift */; };
+		AA9138EF24A2997E005E3AFA /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138E524A2997E005E3AFA /* PeopleCell.swift */; };
+		AA9138F524A2A72F005E3AFA /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138F424A2A72F005E3AFA /* SlideInTransition.swift */; };
+		AA9138FC24A2A74D005E3AFA /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138F724A2A74D005E3AFA /* Classes.swift */; };
+		AA9138FE24A2A74D005E3AFA /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138F924A2A74D005E3AFA /* People.swift */; };
+		AA9138FF24A2A74D005E3AFA /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138FA24A2A74D005E3AFA /* Tasks.swift */; };
+		AA91390024A2A74D005E3AFA /* Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138FB24A2A74D005E3AFA /* Assignments.swift */; };
+		AA91390324A2A91A005E3AFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390224A2A91A005E3AFA /* Constants.swift */; };
+		AA91390524A2AE1C005E3AFA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390424A2AE1C005E3AFA /* MenuViewController.swift */; };
+		AA91390724A2B252005E3AFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA91390624A2B252005E3AFA /* GoogleService-Info.plist */; };
+		AA91390924A2CAA8005E3AFA /* OwnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390824A2CAA8005E3AFA /* OwnedViewController.swift */; };
+		AA91390B24A2CACF005E3AFA /* CreateScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390A24A2CACF005E3AFA /* CreateScheduleViewController.swift */; };
+		AA91390D24A2CB06005E3AFA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390C24A2CB06005E3AFA /* PageViewController.swift */; };
+		AA91390F24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91390E24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift */; };
+		AA91391124A2CB35005E3AFA /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91391024A2CB34005E3AFA /* CreateTaskViewController.swift */; };
+		AA91391324A2CB44005E3AFA /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91391224A2CB44005E3AFA /* PeopleViewController.swift */; };
+		AA91391524A2CB5B005E3AFA /* OwnedSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91391424A2CB5B005E3AFA /* OwnedSettingsViewController.swift */; };
+		AA91391724A2CB72005E3AFA /* OwnedConfirmDeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91391624A2CB72005E3AFA /* OwnedConfirmDeletionViewController.swift */; };
+		AA91391924A2CB85005E3AFA /* changeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91391824A2CB85005E3AFA /* changeViewController.swift */; };
+		AA97C98024A2ECDA00418E5D /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C97F24A2ECDA00418E5D /* MyTasksViewController.swift */; };
+		AA97C98224A2ECE800418E5D /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98124A2ECE800418E5D /* AddTaskViewController.swift */; };
+		AA97C98424A2ECF800418E5D /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98324A2ECF800418E5D /* EditTaskViewController.swift */; };
+		AA97C98A24A2F84C00418E5D /* JoinScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98524A2F84B00418E5D /* JoinScheduleViewController.swift */; };
+		AA97C98B24A2F84C00418E5D /* JoinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98624A2F84B00418E5D /* JoinedViewController.swift */; };
+		AA97C98C24A2F84C00418E5D /* PageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98724A2F84B00418E5D /* PageViewController2.swift */; };
+		AA97C98D24A2F84C00418E5D /* JoinedScheduleNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98824A2F84C00418E5D /* JoinedScheduleNameViewController.swift */; };
+		AA97C98E24A2F84C00418E5D /* JoinedSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98924A2F84C00418E5D /* JoinedSettingsViewController.swift */; };
+		AA97C99024A3AAB000418E5D /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C98F24A3AAB000418E5D /* PushNotificationSender.swift */; };
+		AA97C99624A3E6F100418E5D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138CD24A297B4005E3AFA /* WelcomeViewController.swift */; };
+		AA97C99824A3F1CE00418E5D /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C99724A3F1CE00418E5D /* AppContainerViewController.swift */; };
+		AA97C99A24A3F1DD00418E5D /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97C99924A3F1DD00418E5D /* AppManager.swift */; };
+		AACBCEEF24A6534200A596FC /* TermsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACBCEEE24A6534200A596FC /* TermsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F7A3039BBCE5CC3B8341645 /* Pods-MyNexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNexus.release.xcconfig"; path = "Target Support Files/Pods-MyNexus/Pods-MyNexus.release.xcconfig"; sourceTree = "<group>"; };
+		6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82301288159F740F5635ED6D /* Pods-MyNexus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNexus.debug.xcconfig"; path = "Target Support Files/Pods-MyNexus/Pods-MyNexus.debug.xcconfig"; sourceTree = "<group>"; };
+		AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNexusCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9138B024A28C9C005E3AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AA9138B424A28C9C005E3AFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA9138B724A28C9C005E3AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA9138B924A28CA0005E3AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA9138BC24A28CA0005E3AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA9138BE24A28CA0005E3AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9138C924A2977A005E3AFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AA9138CB24A2978D005E3AFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AA9138CD24A297B4005E3AFA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		AA9138D024A297D6005E3AFA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AA9138D224A297F0005E3AFA /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		AA9138D424A297FF005E3AFA /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		AA9138D624A29811005E3AFA /* ConfirmDeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeletionViewController.swift; sourceTree = "<group>"; };
+		AA9138D824A298FD005E3AFA /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		AA9138DC24A2997C005E3AFA /* AssignmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentCell.xib; sourceTree = "<group>"; };
+		AA9138DD24A2997C005E3AFA /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
+		AA9138DE24A2997C005E3AFA /* JoinedClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinedClassCell.xib; sourceTree = "<group>"; };
+		AA9138DF24A2997C005E3AFA /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		AA9138E024A2997D005E3AFA /* JoinedClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinedClassCell.swift; sourceTree = "<group>"; };
+		AA9138E124A2997D005E3AFA /* OwnedClasssesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OwnedClasssesCell.xib; sourceTree = "<group>"; };
+		AA9138E224A2997D005E3AFA /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		AA9138E324A2997D005E3AFA /* PeopleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
+		AA9138E424A2997E005E3AFA /* OwnedClasssesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnedClasssesCell.swift; sourceTree = "<group>"; };
+		AA9138E524A2997E005E3AFA /* PeopleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
+		AA9138F424A2A72F005E3AFA /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		AA9138F724A2A74D005E3AFA /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		AA9138F924A2A74D005E3AFA /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		AA9138FA24A2A74D005E3AFA /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		AA9138FB24A2A74D005E3AFA /* Assignments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignments.swift; sourceTree = "<group>"; };
+		AA91390224A2A91A005E3AFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA91390424A2AE1C005E3AFA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AA91390624A2B252005E3AFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AA91390824A2CAA8005E3AFA /* OwnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedViewController.swift; sourceTree = "<group>"; };
+		AA91390A24A2CACF005E3AFA /* CreateScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScheduleViewController.swift; sourceTree = "<group>"; };
+		AA91390C24A2CB06005E3AFA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		AA91390E24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OwnedScheduleViewController ViewController.swift"; sourceTree = "<group>"; };
+		AA91391024A2CB34005E3AFA /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		AA91391224A2CB44005E3AFA /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		AA91391424A2CB5B005E3AFA /* OwnedSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedSettingsViewController.swift; sourceTree = "<group>"; };
+		AA91391624A2CB72005E3AFA /* OwnedConfirmDeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedConfirmDeletionViewController.swift; sourceTree = "<group>"; };
+		AA91391824A2CB85005E3AFA /* changeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeViewController.swift; sourceTree = "<group>"; };
+		AA97C97F24A2ECDA00418E5D /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
+		AA97C98124A2ECE800418E5D /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		AA97C98324A2ECF800418E5D /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		AA97C98524A2F84B00418E5D /* JoinScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinScheduleViewController.swift; sourceTree = "<group>"; };
+		AA97C98624A2F84B00418E5D /* JoinedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinedViewController.swift; sourceTree = "<group>"; };
+		AA97C98724A2F84B00418E5D /* PageViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController2.swift; sourceTree = "<group>"; };
+		AA97C98824A2F84C00418E5D /* JoinedScheduleNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinedScheduleNameViewController.swift; sourceTree = "<group>"; };
+		AA97C98924A2F84C00418E5D /* JoinedSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinedSettingsViewController.swift; sourceTree = "<group>"; };
+		AA97C98F24A3AAB000418E5D /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
+		AA97C99124A3ABCE00418E5D /* MyNexus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyNexus.entitlements; sourceTree = "<group>"; };
+		AA97C99724A3F1CE00418E5D /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
+		AA97C99924A3F1DD00418E5D /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		AACBCEEE24A6534200A596FC /* TermsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA9138AA24A28C9C005E3AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DBA20E3E360ADF8220D43D /* Pods_MyNexus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		363909751AA04C2903618688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A796BD1127AD726ACB9E27A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82301288159F740F5635ED6D /* Pods-MyNexus.debug.xcconfig */,
+				0F7A3039BBCE5CC3B8341645 /* Pods-MyNexus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA9138A424A28C9C005E3AFA = {
+			isa = PBXGroup;
+			children = (
+				AA9138AF24A28C9C005E3AFA /* MyNexus */,
+				AA9138AE24A28C9C005E3AFA /* Products */,
+				A796BD1127AD726ACB9E27A2 /* Pods */,
+				363909751AA04C2903618688 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA9138AE24A28C9C005E3AFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA9138AF24A28C9C005E3AFA /* MyNexus */ = {
+			isa = PBXGroup;
+			children = (
+				AA97C99124A3ABCE00418E5D /* MyNexus.entitlements */,
+				AA91390124A2A8D9005E3AFA /* Constants */,
+				AA9138F624A2A738005E3AFA /* Models */,
+				AA9138F324A2A71F005E3AFA /* Transition */,
+				AA9138F024A29986005E3AFA /* TableViewCells */,
+				AA9138C424A29708005E3AFA /* PushNotifications */,
+				AA9138C824A29753005E3AFA /* ViewControllers */,
+				AA9138B024A28C9C005E3AFA /* AppDelegate.swift */,
+				AA97C99924A3F1DD00418E5D /* AppManager.swift */,
+				AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */,
+				AA9138B624A28C9C005E3AFA /* Main.storyboard */,
+				AA9138B924A28CA0005E3AFA /* Assets.xcassets */,
+				AA9138BB24A28CA0005E3AFA /* LaunchScreen.storyboard */,
+				AA9138BE24A28CA0005E3AFA /* Info.plist */,
+				AA91390624A2B252005E3AFA /* GoogleService-Info.plist */,
+			);
+			path = MyNexus;
+			sourceTree = "<group>";
+		};
+		AA9138C424A29708005E3AFA /* PushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138D824A298FD005E3AFA /* PushNotificationManager.swift */,
+				AA97C98F24A3AAB000418E5D /* PushNotificationSender.swift */,
+			);
+			path = PushNotifications;
+			sourceTree = "<group>";
+		};
+		AA9138C524A29715005E3AFA /* OwnedCoursesPathway */ = {
+			isa = PBXGroup;
+			children = (
+				AA91390824A2CAA8005E3AFA /* OwnedViewController.swift */,
+				AA91390A24A2CACF005E3AFA /* CreateScheduleViewController.swift */,
+				AA91390C24A2CB06005E3AFA /* PageViewController.swift */,
+				AA91390E24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift */,
+				AA91391024A2CB34005E3AFA /* CreateTaskViewController.swift */,
+				AA91391224A2CB44005E3AFA /* PeopleViewController.swift */,
+				AA91391424A2CB5B005E3AFA /* OwnedSettingsViewController.swift */,
+				AA91391624A2CB72005E3AFA /* OwnedConfirmDeletionViewController.swift */,
+				AA91391824A2CB85005E3AFA /* changeViewController.swift */,
+			);
+			path = OwnedCoursesPathway;
+			sourceTree = "<group>";
+		};
+		AA9138C624A29724005E3AFA /* JoinedCoursesPathway */ = {
+			isa = PBXGroup;
+			children = (
+				AA97C98624A2F84B00418E5D /* JoinedViewController.swift */,
+				AA97C98524A2F84B00418E5D /* JoinScheduleViewController.swift */,
+				AA97C98724A2F84B00418E5D /* PageViewController2.swift */,
+				AA97C98824A2F84C00418E5D /* JoinedScheduleNameViewController.swift */,
+				AA97C98924A2F84C00418E5D /* JoinedSettingsViewController.swift */,
+			);
+			path = JoinedCoursesPathway;
+			sourceTree = "<group>";
+		};
+		AA9138C724A29735005E3AFA /* PersonalPathway */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138B424A28C9C005E3AFA /* ViewController.swift */,
+				AA9138C924A2977A005E3AFA /* LoginViewController.swift */,
+				AA9138CB24A2978D005E3AFA /* SignUpViewController.swift */,
+				AA9138CD24A297B4005E3AFA /* WelcomeViewController.swift */,
+				AA91390424A2AE1C005E3AFA /* MenuViewController.swift */,
+				AA97C97F24A2ECDA00418E5D /* MyTasksViewController.swift */,
+				AA97C98124A2ECE800418E5D /* AddTaskViewController.swift */,
+				AA97C98324A2ECF800418E5D /* EditTaskViewController.swift */,
+				AA97C99724A3F1CE00418E5D /* AppContainerViewController.swift */,
+				AACBCEEE24A6534200A596FC /* TermsTableViewController.swift */,
+			);
+			path = PersonalPathway;
+			sourceTree = "<group>";
+		};
+		AA9138C824A29753005E3AFA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138CF24A297BA005E3AFA /* SettingsPathway */,
+				AA9138C724A29735005E3AFA /* PersonalPathway */,
+				AA9138C624A29724005E3AFA /* JoinedCoursesPathway */,
+				AA9138C524A29715005E3AFA /* OwnedCoursesPathway */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA9138CF24A297BA005E3AFA /* SettingsPathway */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138D024A297D6005E3AFA /* SettingsViewController.swift */,
+				AA9138D224A297F0005E3AFA /* AccountSettingsViewController.swift */,
+				AA9138D424A297FF005E3AFA /* ChangePasswordViewController.swift */,
+				AA9138D624A29811005E3AFA /* ConfirmDeletionViewController.swift */,
+			);
+			path = SettingsPathway;
+			sourceTree = "<group>";
+		};
+		AA9138F024A29986005E3AFA /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138DD24A2997C005E3AFA /* AssignmentCell.swift */,
+				AA9138DC24A2997C005E3AFA /* AssignmentCell.xib */,
+				AA9138E024A2997D005E3AFA /* JoinedClassCell.swift */,
+				AA9138DE24A2997C005E3AFA /* JoinedClassCell.xib */,
+				AA9138E224A2997D005E3AFA /* MessageCell.swift */,
+				AA9138DF24A2997C005E3AFA /* MessageCell.xib */,
+				AA9138E424A2997E005E3AFA /* OwnedClasssesCell.swift */,
+				AA9138E124A2997D005E3AFA /* OwnedClasssesCell.xib */,
+				AA9138E524A2997E005E3AFA /* PeopleCell.swift */,
+				AA9138E324A2997D005E3AFA /* PeopleCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		AA9138F324A2A71F005E3AFA /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138F424A2A72F005E3AFA /* SlideInTransition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		AA9138F624A2A738005E3AFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA9138FB24A2A74D005E3AFA /* Assignments.swift */,
+				AA9138F724A2A74D005E3AFA /* Classes.swift */,
+				AA9138F924A2A74D005E3AFA /* People.swift */,
+				AA9138FA24A2A74D005E3AFA /* Tasks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA91390124A2A8D9005E3AFA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AA91390224A2A91A005E3AFA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA9138AC24A28C9C005E3AFA /* MyNexus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA9138C124A28CA0005E3AFA /* Build configuration list for PBXNativeTarget "MyNexus" */;
+			buildPhases = (
+				E3662B214DC3E968D010870E /* [CP] Check Pods Manifest.lock */,
+				AA9138A924A28C9C005E3AFA /* Sources */,
+				AA9138AA24A28C9C005E3AFA /* Frameworks */,
+				AA9138AB24A28C9C005E3AFA /* Resources */,
+				2BD44D2FF7FA82AF6CA9B074 /* [CP] Embed Pods Frameworks */,
+				AE5E62367349430BE589E9DC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyNexus;
+			productName = MyNexus;
+			productReference = AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA9138A524A28C9C005E3AFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Jeffrey Bennet";
+				TargetAttributes = {
+					AA9138AC24A28C9C005E3AFA = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = AA9138A824A28C9C005E3AFA /* Build configuration list for PBXProject "MyNexus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA9138A424A28C9C005E3AFA;
+			productRefGroup = AA9138AE24A28C9C005E3AFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA9138AC24A28C9C005E3AFA /* MyNexus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA9138AB24A28C9C005E3AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA91390724A2B252005E3AFA /* GoogleService-Info.plist in Resources */,
+				AA9138ED24A2997E005E3AFA /* PeopleCell.xib in Resources */,
+				AA9138BD24A28CA0005E3AFA /* LaunchScreen.storyboard in Resources */,
+				AA9138E624A2997E005E3AFA /* AssignmentCell.xib in Resources */,
+				AA9138E824A2997E005E3AFA /* JoinedClassCell.xib in Resources */,
+				AA9138EB24A2997E005E3AFA /* OwnedClasssesCell.xib in Resources */,
+				AA9138BA24A28CA0005E3AFA /* Assets.xcassets in Resources */,
+				AA9138E924A2997E005E3AFA /* MessageCell.xib in Resources */,
+				AA9138B824A28C9C005E3AFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BD44D2FF7FA82AF6CA9B074 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5E62367349430BE589E9DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyNexus/Pods-MyNexus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3662B214DC3E968D010870E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyNexus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA9138A924A28C9C005E3AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9138EF24A2997E005E3AFA /* PeopleCell.swift in Sources */,
+				AA91391724A2CB72005E3AFA /* OwnedConfirmDeletionViewController.swift in Sources */,
+				AA91391924A2CB85005E3AFA /* changeViewController.swift in Sources */,
+				AA9138E724A2997E005E3AFA /* AssignmentCell.swift in Sources */,
+				AA9138F524A2A72F005E3AFA /* SlideInTransition.swift in Sources */,
+				AA9138CA24A2977A005E3AFA /* LoginViewController.swift in Sources */,
+				AA97C98E24A2F84C00418E5D /* JoinedSettingsViewController.swift in Sources */,
+				AA97C98A24A2F84C00418E5D /* JoinScheduleViewController.swift in Sources */,
+				AA9138FE24A2A74D005E3AFA /* People.swift in Sources */,
+				AA91391324A2CB44005E3AFA /* PeopleViewController.swift in Sources */,
+				AA9138B524A28C9C005E3AFA /* ViewController.swift in Sources */,
+				AA91390D24A2CB06005E3AFA /* PageViewController.swift in Sources */,
+				AA91390324A2A91A005E3AFA /* Constants.swift in Sources */,
+				AA97C98C24A2F84C00418E5D /* PageViewController2.swift in Sources */,
+				AA91390B24A2CACF005E3AFA /* CreateScheduleViewController.swift in Sources */,
+				AACBCEEF24A6534200A596FC /* TermsTableViewController.swift in Sources */,
+				AA91391124A2CB35005E3AFA /* CreateTaskViewController.swift in Sources */,
+				AA91390524A2AE1C005E3AFA /* MenuViewController.swift in Sources */,
+				AA97C98D24A2F84C00418E5D /* JoinedScheduleNameViewController.swift in Sources */,
+				AA9138D124A297D6005E3AFA /* SettingsViewController.swift in Sources */,
+				AA91390F24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift in Sources */,
+				AA97C99824A3F1CE00418E5D /* AppContainerViewController.swift in Sources */,
+				AA9138FF24A2A74D005E3AFA /* Tasks.swift in Sources */,
+				AA97C98024A2ECDA00418E5D /* MyTasksViewController.swift in Sources */,
+				AA91390924A2CAA8005E3AFA /* OwnedViewController.swift in Sources */,
+				AA97C98424A2ECF800418E5D /* EditTaskViewController.swift in Sources */,
+				AA9138D524A297FF005E3AFA /* ChangePasswordViewController.swift in Sources */,
+				AA97C99A24A3F1DD00418E5D /* AppManager.swift in Sources */,
+				AA9138D324A297F0005E3AFA /* AccountSettingsViewController.swift in Sources */,
+				AA9138FC24A2A74D005E3AFA /* Classes.swift in Sources */,
+				AA9138D724A29811005E3AFA /* ConfirmDeletionViewController.swift in Sources */,
+				AA9138EA24A2997E005E3AFA /* JoinedClassCell.swift in Sources */,
+				AA97C99024A3AAB000418E5D /* PushNotificationSender.swift in Sources */,
+				AA9138B124A28C9C005E3AFA /* AppDelegate.swift in Sources */,
+				AA97C98B24A2F84C00418E5D /* JoinedViewController.swift in Sources */,
+				AA91390024A2A74D005E3AFA /* Assignments.swift in Sources */,
+				AA97C99624A3E6F100418E5D /* WelcomeViewController.swift in Sources */,
+				AA9138EE24A2997E005E3AFA /* OwnedClasssesCell.swift in Sources */,
+				AA91391524A2CB5B005E3AFA /* OwnedSettingsViewController.swift in Sources */,
+				AA9138D924A298FD005E3AFA /* PushNotificationManager.swift in Sources */,
+				AA9138B324A28C9C005E3AFA /* SceneDelegate.swift in Sources */,
+				AA9138CC24A2978D005E3AFA /* SignUpViewController.swift in Sources */,
+				AA9138EC24A2997E005E3AFA /* MessageCell.swift in Sources */,
+				AA97C98224A2ECE800418E5D /* AddTaskViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA9138B624A28C9C005E3AFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA9138B724A28C9C005E3AFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA9138BB24A28CA0005E3AFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA9138BC24A28CA0005E3AFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA9138BF24A28CA0005E3AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA9138C024A28CA0005E3AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA9138C224A28CA0005E3AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82301288159F740F5635ED6D /* Pods-MyNexus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyNexus/MyNexus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECZ5X4UZFD;
+				INFOPLIST_FILE = MyNexus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
+				PRODUCT_NAME = MyNexusCalendar;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA9138C324A28CA0005E3AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F7A3039BBCE5CC3B8341645 /* Pods-MyNexus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyNexus/MyNexus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECZ5X4UZFD;
+				INFOPLIST_FILE = MyNexus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
+				PRODUCT_NAME = MyNexusCalendar;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA9138A824A28C9C005E3AFA /* Build configuration list for PBXProject "MyNexus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9138BF24A28CA0005E3AFA /* Debug */,
+				AA9138C024A28CA0005E3AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA9138C124A28CA0005E3AFA /* Build configuration list for PBXNativeTarget "MyNexus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9138C224A28CA0005E3AFA /* Debug */,
+				AA9138C324A28CA0005E3AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA9138A524A28C9C005E3AFA /* Project object */;
+}
