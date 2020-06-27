@@ -30,7 +30,8 @@ var nameText = ""
     @IBOutlet weak var scheduleNamelabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.tabBar.isHidden = true
+         NotificationCenter.default.addObserver(self, selector: #selector(loadList2), name: NSNotification.Name(rawValue: "load2"), object: nil)
     formatter.dateFormat = "MM/dd/YYYY E"
         dates = formatter.string(from: date)
         print(color)
@@ -58,9 +59,14 @@ var nameText = ""
         
         
     }
+    @objc func loadList2(notification: NSNotification){
+              //load data here
+              loadData()
+          }
     func loadData(){
         db.collection("Assignments").document(finalCode).collection("currentAssignments").whereField("DueDate", isGreaterThanOrEqualTo: dates).getDocuments(source: .cache){
             (querySnapshot, error) in
+            self.task = []
             if let snapshot = querySnapshot?.documents{
                 for doc in snapshot{
                     let data = doc.data()
@@ -148,7 +154,7 @@ var nameText = ""
     
     
     @IBAction func addPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toAssign", sender: self)
+         
     }
     
     
@@ -165,7 +171,9 @@ var nameText = ""
     */
     
     @IBAction func xPressed(_ sender: UIButton) {
-         performSegue(withIdentifier: "bb", sender: self)
+        
+        self.tabBarController?.tabBar.isHidden = false
+        _ = navigationController?.popViewController(animated: true)
     }
     
 }

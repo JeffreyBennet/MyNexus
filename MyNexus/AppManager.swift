@@ -23,7 +23,7 @@ class AppManager {
       if Auth.auth().currentUser == nil {
         viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
       } else {
-        viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+        viewController = storyboard.instantiateViewController(withIdentifier: "VC")
       }
             
         }
@@ -32,7 +32,7 @@ class AppManager {
             viewController = storyboard.instantiateViewController(withIdentifier: "TermsTableViewController")
             
         }
-      appContainer.present(viewController, animated: true, completion: nil)
+      appContainer.present(viewController, animated: false, completion: nil)
      
     }
     

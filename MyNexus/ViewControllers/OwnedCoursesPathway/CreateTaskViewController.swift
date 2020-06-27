@@ -104,7 +104,8 @@ class CreateTaskViewController: UIViewController, UITextFieldDelegate {
                                 }
                             }
                         }
-                        self.performSegue(withIdentifier: "xy", sender: self)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load2"), object: nil)
+                                               self.dismiss(animated: true, completion: nil)
                     }
                        DispatchQueue.main.async {
                         

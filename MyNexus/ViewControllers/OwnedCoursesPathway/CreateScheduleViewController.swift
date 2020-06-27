@@ -59,7 +59,8 @@ class CreateScheduleViewController: UIViewController, UITextFieldDelegate {
                         self.db.collection("Classes").document(cc).setData(["ClassName": self.className.text!, "Color": self.color])
                         
                         self.db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Owned").document(cc).setData(["ClassName": self.className.text!, "peopleTimeStamp": "\(Date().timeIntervalSince1970)",  "Color": self.color])
-                        self.performSegue(withIdentifier: "xy", sender: self)
+                          NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load1"), object: nil)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             }

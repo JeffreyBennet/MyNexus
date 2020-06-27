@@ -28,6 +28,8 @@ class JoinedViewController: UIViewController, UIViewControllerTransitioningDeleg
     var task: [Classes] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList4), name: NSNotification.Name(rawValue: "load4"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList4), name: NSNotification.Name(rawValue: "load5"), object: nil)
        // backView.layer.cornerRadius = 10
        // firstView.layer.cornerRadius = 10
       //classTableView.layer.cornerRadius = 10
@@ -63,6 +65,13 @@ class JoinedViewController: UIViewController, UIViewControllerTransitioningDeleg
         }
     
     }
+    @objc func loadList4(notification: NSNotification){
+                 //    self.classTableView.reloadData()
+                 loadData()
+             }
+    @objc func loadList5(notification: NSNotification){
+                   loadData()
+                }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -92,12 +101,13 @@ class JoinedViewController: UIViewController, UIViewControllerTransitioningDeleg
     func loadData() {
         self.db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Joined").getDocuments(source: .cache){
         (querySnapshot, error) in
+            self.task = []
             if let snapshot = querySnapshot?.documents{
                 if snapshot.count == 0{
-                    //self.firstView.alpha = 1
-                   // self.firstLabel.alpha = 1
+                    self.classTableView.alpha = 0
                 }
                 else{
+                    self.classTableView.alpha = 1
                    // self.firstView.alpha = 0
                                      //  self.firstLabel.alpha = 0
                 }
@@ -107,9 +117,11 @@ class JoinedViewController: UIViewController, UIViewControllerTransitioningDeleg
                         let newClass = Classes(className: name, classCode: doc.documentID, color: color1)
                         self.task.append(newClass)
                         DispatchQueue.main.async {
+                            
                                self.classTableView.reloadData()
                             let indexPath = IndexPath(row: self.task.count - 1, section: 0)
                             self.classTableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                            
                         }
                     }
                 }

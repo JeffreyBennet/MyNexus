@@ -82,7 +82,8 @@ class changeViewController: UIViewController, UITextFieldDelegate  {
                                  if let fcm = data["fcmToken"] as? String{
                                      let uid = doc.documentID
                                     self.db.collection("tasks").document(uid).collection("currentUser").document(self.docId).setData(["TimeStamp": "Deleted"], merge: true )
-                                    self.performSegue(withIdentifier: "bb", sender: self)
+                                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load2"), object: nil)
+                                          self.dismiss(animated: true, completion: nil)
                                                     }
                                                 }
                                             }
@@ -114,7 +115,8 @@ class changeViewController: UIViewController, UITextFieldDelegate  {
                                            }
                                        }
                                    }
-            performSegue(withIdentifier: "bb", sender: self)
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load2"), object: nil)
+                                   self.dismiss(animated: true, completion: nil)
             
         }
                 else{

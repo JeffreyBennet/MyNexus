@@ -36,11 +36,12 @@ class OwnedConfirmDeletionViewControllerViewController: UIViewController {
     
     @IBAction func deletePressde(_ sender: UIButton) {
         db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Owned").document(code).delete()
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load6"), object: nil)
+               _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+         _ = navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation

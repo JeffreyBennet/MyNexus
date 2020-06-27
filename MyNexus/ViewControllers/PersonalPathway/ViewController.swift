@@ -18,8 +18,8 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
        // loginButton.layer.borderWidth = 2
-       signUpButton.layer.borderColor = UIColor(named: "newBlue")?.cgColor
-        loginButton.layer.borderColor = UIColor.white.cgColor
+       loginButton.layer.borderColor = UIColor(named: "newBlue")?.cgColor
+        signUpButton.layer.borderColor = UIColor.clear.cgColor
         
          
             loginButton.layer.cornerRadius = 20

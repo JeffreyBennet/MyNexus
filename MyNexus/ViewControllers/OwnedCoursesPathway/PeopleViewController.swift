@@ -21,6 +21,8 @@ class PeopleViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.isHidden = true
         /*refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         membersTableView.addSubview(refreshControl)
@@ -101,7 +103,9 @@ self.refreshControl.endRefreshing()
            }
     }
     @IBAction func xPressed(_ sender: UIButton) {
-         performSegue(withIdentifier: "bb", sender: self)
+          _ = navigationController?.popViewController(animated: true)
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            return 50

@@ -19,6 +19,9 @@ class JoinScheduleViewController: UIViewController, UITextFieldDelegate {
     var exists1 = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.isHidden = true
+         
         self.hideKeyboardWhenTappedAround() 
         loginButton.layer.cornerRadius = 17.5
          loginButton.layer.borderWidth = 1
@@ -38,6 +41,8 @@ class JoinScheduleViewController: UIViewController, UITextFieldDelegate {
    
     @IBAction func dismissPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
     @IBAction func joinTapped(_ sender: UIButton) {
         if codeTextField.text != "" {
@@ -67,7 +72,10 @@ class JoinScheduleViewController: UIViewController, UITextFieldDelegate {
                                 }
                             }
                         }
-                        self.performSegue(withIdentifier: "backback", sender: self)
+                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load4"), object: nil)
+                          self.dismiss(animated: true, completion: nil)
+
+                        self.tabBarController?.tabBar.isHidden = false
                     }
                     else{
                         self.errorLabel.text = "Class code does not exist"

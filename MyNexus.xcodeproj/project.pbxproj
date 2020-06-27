@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78DBA20E3E360ADF8220D43D /* Pods_MyNexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */; };
+		AA762D7924A66EE100242324 /* PrivacyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA762D7824A66EE100242324 /* PrivacyTableViewController.swift */; };
 		AA9138B124A28C9C005E3AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B024A28C9C005E3AFA /* AppDelegate.swift */; };
 		AA9138B324A28C9C005E3AFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */; };
 		AA9138B524A28C9C005E3AFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9138B424A28C9C005E3AFA /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		0F7A3039BBCE5CC3B8341645 /* Pods-MyNexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNexus.release.xcconfig"; path = "Target Support Files/Pods-MyNexus/Pods-MyNexus.release.xcconfig"; sourceTree = "<group>"; };
 		6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82301288159F740F5635ED6D /* Pods-MyNexus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNexus.debug.xcconfig"; path = "Target Support Files/Pods-MyNexus/Pods-MyNexus.debug.xcconfig"; sourceTree = "<group>"; };
+		AA762D7824A66EE100242324 /* PrivacyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewController.swift; sourceTree = "<group>"; };
 		AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNexusCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9138B024A28C9C005E3AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				AA97C98324A2ECF800418E5D /* EditTaskViewController.swift */,
 				AA97C99724A3F1CE00418E5D /* AppContainerViewController.swift */,
 				AACBCEEE24A6534200A596FC /* TermsTableViewController.swift */,
+				AA762D7824A66EE100242324 /* PrivacyTableViewController.swift */,
 			);
 			path = PersonalPathway;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				AA91390524A2AE1C005E3AFA /* MenuViewController.swift in Sources */,
 				AA97C98D24A2F84C00418E5D /* JoinedScheduleNameViewController.swift in Sources */,
 				AA9138D124A297D6005E3AFA /* SettingsViewController.swift in Sources */,
+				AA762D7924A66EE100242324 /* PrivacyTableViewController.swift in Sources */,
 				AA91390F24A2CB26005E3AFA /* OwnedScheduleViewController ViewController.swift in Sources */,
 				AA97C99824A3F1CE00418E5D /* AppContainerViewController.swift in Sources */,
 				AA9138FF24A2A74D005E3AFA /* Tasks.swift in Sources */,
@@ -649,6 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
 				PRODUCT_NAME = MyNexusCalendar;
 				SWIFT_VERSION = 5.0;
@@ -669,6 +674,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
 				PRODUCT_NAME = MyNexusCalendar;
 				SWIFT_VERSION = 5.0;

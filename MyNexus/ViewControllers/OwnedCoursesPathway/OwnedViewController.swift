@@ -25,7 +25,10 @@ class OwnedViewController: UIViewController, UIViewControllerTransitioningDelega
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load1"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load6"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load7"), object: nil)
+              
        
         classTableView.dataSource = self
         classTableView.delegate = self
@@ -69,10 +72,14 @@ class OwnedViewController: UIViewController, UIViewControllerTransitioningDelega
         db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Owned").getDocuments(source: .cache){
             (querySnapshot, error) in
             print("iyguy")
+            self.task = []
             if querySnapshot!.documents.count == 0{
-                print("iygededuy")
+                self.classTableView.alpha = 0
                     
                 
+            }
+            else{
+                    self.classTableView.alpha = 1
             }
             if let snapshot = querySnapshot?.documents{
                 
@@ -95,7 +102,10 @@ class OwnedViewController: UIViewController, UIViewControllerTransitioningDelega
             }
         }
     }
-    
+    @objc func loadList1(notification: NSNotification){
+           //load data here
+           loadData()
+       }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return 0
     }

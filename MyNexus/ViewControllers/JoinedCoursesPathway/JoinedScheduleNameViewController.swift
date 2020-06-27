@@ -25,6 +25,8 @@ class JoinedScheduleNameViewController: UIViewController, UIViewControllerTransi
         super.viewDidLoad()
         labelText.text = finalName1
         print(finalCode)
+        
+        self.tabBarController?.tabBar.isHidden = true
          assignmentsTableView.rowHeight = UITableView.automaticDimension
          assignmentsTableView.estimatedRowHeight = 600
          formatter.dateFormat = "MM/dd/YYYY E"
@@ -118,7 +120,9 @@ class JoinedScheduleNameViewController: UIViewController, UIViewControllerTransi
     }
     
     @IBAction func xPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+           _ = navigationController?.popViewController(animated: true)
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     /*

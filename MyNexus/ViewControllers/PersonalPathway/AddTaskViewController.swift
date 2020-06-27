@@ -53,10 +53,11 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
                          print(e)
                      }
                      else {
-                         print("success")
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                         self.dismiss(animated: true, completion: nil)
                      }
                      DispatchQueue.main.async {
-                          self.performSegue(withIdentifier: "back", sender: self)
+                        
                          self.nameTextField.text = ""
                          self.descTextField.text = ""
                          self.dueDateTextField.text = ""

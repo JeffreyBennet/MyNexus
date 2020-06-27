@@ -52,7 +52,18 @@ class OwnedSettingsViewController: UIViewController, UITextFieldDelegate {
         nameLabel.text = classname1
         classCode.addTarget(self, action: #selector(OwnedSettingsViewController.textFieldDidChange(_:)), for: .editingChanged)
         className.addTarget(self, action: #selector(OwnedSettingsViewController.textFieldDidChange(_:)), for: .editingChanged)
+        
+        self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
+    }
+    
+   
+    @IBAction func deleted1(_ sender: UIButton) {
+        db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Owned").document(classCode1).delete()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load7"), object: nil)
+        
+        self.tabBarController?.tabBar.isHidden = false
+        _ = navigationController?.popViewController(animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -84,8 +95,10 @@ class OwnedSettingsViewController: UIViewController, UITextFieldDelegate {
         button.isEnabled = false
         if classCode.text != "" && className.text != ""  {
             let newName = className.text!
+            
             db.collection("Classes").document(classCode1).setData(["ClassName": newName], merge: true)
             db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Owned").document(classCode1).setData(["ClassName": newName], merge: true)
+            
             self.db.collection("Classes").document(classCode1).collection("JoinedUsers").getDocuments(source: .cache){
                  (querySnapshot, error) in
                  if let snapshot = querySnapshot?.documents{
@@ -125,7 +138,9 @@ class OwnedSettingsViewController: UIViewController, UITextFieldDelegate {
     */
 
     @IBAction func xPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "bb", sender: self)
+        
+        self.tabBarController?.tabBar.isHidden = false
+         _ = navigationController?.popViewController(animated: true)
     }
     
 

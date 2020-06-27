@@ -25,6 +25,7 @@ class MyTasksViewController: UIViewController, UIViewControllerTransitioningDele
 var dates = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         formatter.dateFormat = "MM/dd/YYYY E"
         dates = formatter.string(from: date)
         
@@ -49,6 +50,7 @@ var dates = ""
    
         db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").whereField("Type", isEqualTo: "Personal").whereField("Date", isGreaterThanOrEqualTo: dates).getDocuments(source: .cache){
            (querySnapshot, error) in
+            self.task = []
             if querySnapshot!.documents.count == 0{
                            print("iygededuy")
                // self.firstView.alpha = 1
@@ -69,7 +71,7 @@ var dates = ""
                        self.task.append(newTask)
                        
                        DispatchQueue.main.async {
-                          self.taskTableView.reloadData()
+                       self.taskTableView.reloadData()
                        let indexPath = IndexPath(row: self.task.count - 1, section: 0)
                        self.taskTableView.scrollToRow(at: indexPath, at: .top, animated: false)
                    }
@@ -78,7 +80,10 @@ var dates = ""
        }
    }
     }
-
+    @objc func loadList(notification: NSNotification){
+        //load data here
+        loadData()
+    }
      func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
             transition.isPresenting = true
             return transition
