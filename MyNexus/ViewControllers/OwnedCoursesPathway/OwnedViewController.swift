@@ -25,6 +25,7 @@ class OwnedViewController: UIViewController, UIViewControllerTransitioningDelega
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.classTableView.tableFooterView = UIView()
          NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load1"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load6"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadList1), name: NSNotification.Name(rawValue: "load7"), object: nil)

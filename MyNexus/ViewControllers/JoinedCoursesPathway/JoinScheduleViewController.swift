@@ -50,8 +50,9 @@ class JoinScheduleViewController: UIViewController, UITextFieldDelegate {
                 (document, error) in
                 if let doc = document{
                     let data = doc.data()
-                    let name = data!["ClassName"] as! String
+                    
                     if doc.exists{
+                        let name = data!["ClassName"] as! String
                         self.db.collection("Classes").document(self.codeTextField.text!).collection("JoinedUsers").document(Auth.auth().currentUser?.uid ?? "").setData(["fcmToken": Constants.fcmToken, "Name": Constants.name, "TimeStamp": "\(Date().timeIntervalSince1970)"])
                         
                         self.db.collection(Auth.auth().currentUser?.uid ?? "").document("UserInfo").collection("Joined").document(self.codeTextField.text!).setData(["ClassName": data!["ClassName"] as! String, "TimeStamp": "\(Date().timeIntervalSince1970)","AssignmentTimeStamp":"\(Date().timeIntervalSince1970)", "Color": data!["Color"] as! String])

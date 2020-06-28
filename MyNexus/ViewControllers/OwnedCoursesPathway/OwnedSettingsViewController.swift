@@ -138,7 +138,8 @@ class OwnedSettingsViewController: UIViewController, UITextFieldDelegate {
     */
 
     @IBAction func xPressed(_ sender: UIButton) {
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load1"), object: nil)
+
         self.tabBarController?.tabBar.isHidden = false
          _ = navigationController?.popViewController(animated: true)
     }

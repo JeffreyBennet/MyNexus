@@ -53,28 +53,10 @@ class JoinedSettingsViewController: UIViewController {
        
         db.collection("Assignments").document(classCode).collection("currentAssignments").getDocuments(source: .cache){
             (querySnapshot, error) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load10"), object: nil)
             if let snapshot = querySnapshot?.documents{
                 for doc in snapshot {
-                    let data = doc.data()
-                    if let name = data["AssignmentsName"] as? String, let desc = data["AssignmentsDesc"] as? String, let date = data["DueDate"] as? String{
-                        
-                    self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").getDocuments(source: .cache){
-                        (querySnapshot, error ) in
-                        if let snap = querySnapshot?.documents{
-                            for d in snap {
-                                let data1 = doc.data()
-                                if let name1 = data1["Task Title"] as? String, let desc1 = data1["Task Description"] as? String, let date1 = data1["Date"] as? String, let type1 = data1["Type"] as? String{
-                                    if name == name1 && date == date1 && desc == desc1 && type1 == self.className{
-                                        self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(d.documentID).delete()
-                                       
-                                    }
-                                    
-                                }
-                            }
-                        }
-                        }
-                    }
-                    
+                    self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(doc.documentID).delete()
                 }
             }
         }

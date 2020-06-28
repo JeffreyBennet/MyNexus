@@ -39,7 +39,7 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate  {
         dateTextField.text = finalDate
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeViewController.viewTapped(gestureRecognizer:)))
-               
+               dates = finalDate
                datePicker = UIDatePicker()
                datePicker?.datePickerMode = .date
                datePicker?.addTarget(self, action: #selector(changeViewController.dateChanged(datePicker:)), for: .valueChanged)
@@ -62,7 +62,7 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate  {
     }
     @objc func dateChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy E"
+        dateFormatter.dateFormat = "MM/dd/yyyy EEE"
         dates = dateFormatter.string(from: datePicker.date)
         dateTextField.text = dateFormatter.string(from: datePicker.date)
        
@@ -71,8 +71,8 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func deletPressed(_ sender: UIButton) {
         self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(self.docId).delete()
-        self.performSegue(withIdentifier: "xx", sender: self)
-                                                    
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                              self.dismiss(animated: true, completion: nil)
                                                 
                                             
                                         
@@ -81,7 +81,8 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate  {
         if dateTextField.text != "" && nameTextField.text != "" && descTextField.text != "" {
             errorLabel.alpha = 0
             self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(self.docId).setData(["Task Title": nameTextField.text, "Task Description": descTextField.text!, "Date": dates],merge: true )
-                   performSegue(withIdentifier: "xx", sender: self)
+                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                                         self.dismiss(animated: true, completion: nil)
             
         }
                 else{

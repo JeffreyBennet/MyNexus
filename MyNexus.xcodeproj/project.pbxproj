@@ -69,7 +69,7 @@
 		6D5AD90B906B0A5A808DDF75 /* Pods_MyNexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82301288159F740F5635ED6D /* Pods-MyNexus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNexus.debug.xcconfig"; path = "Target Support Files/Pods-MyNexus/Pods-MyNexus.debug.xcconfig"; sourceTree = "<group>"; };
 		AA762D7824A66EE100242324 /* PrivacyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewController.swift; sourceTree = "<group>"; };
-		AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNexusCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9138AD24A28C9C005E3AFA /* MyNexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNexus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9138B024A28C9C005E3AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA9138B224A28C9C005E3AFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA9138B424A28C9C005E3AFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		AA9138AE24A28C9C005E3AFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */,
+				AA9138AD24A28C9C005E3AFA /* MyNexus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 			);
 			name = MyNexus;
 			productName = MyNexus;
-			productReference = AA9138AD24A28C9C005E3AFA /* MyNexusCalendar.app */;
+			productReference = AA9138AD24A28C9C005E3AFA /* MyNexus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -649,15 +649,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZ5X4UZFD;
 				INFOPLIST_FILE = MyNexus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
-				PRODUCT_NAME = MyNexusCalendar;
+				PRODUCT_NAME = MyNexus;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -670,15 +671,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZ5X4UZFD;
 				INFOPLIST_FILE = MyNexus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffreyBennet.MyNexusCalendar;
-				PRODUCT_NAME = MyNexusCalendar;
+				PRODUCT_NAME = MyNexus;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

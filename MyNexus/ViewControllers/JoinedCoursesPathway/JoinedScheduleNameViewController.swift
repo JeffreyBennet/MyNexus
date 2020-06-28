@@ -25,7 +25,7 @@ class JoinedScheduleNameViewController: UIViewController, UIViewControllerTransi
         super.viewDidLoad()
         labelText.text = finalName1
         print(finalCode)
-        
+        self.assignmentsTableView.tableFooterView = UIView()
         self.tabBarController?.tabBar.isHidden = true
          assignmentsTableView.rowHeight = UITableView.automaticDimension
          assignmentsTableView.estimatedRowHeight = 600

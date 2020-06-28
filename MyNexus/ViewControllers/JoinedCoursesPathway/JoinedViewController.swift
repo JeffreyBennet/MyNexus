@@ -28,6 +28,7 @@ class JoinedViewController: UIViewController, UIViewControllerTransitioningDeleg
     var task: [Classes] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.classTableView.tableFooterView = UIView()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList4), name: NSNotification.Name(rawValue: "load4"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadList4), name: NSNotification.Name(rawValue: "load5"), object: nil)
        // backView.layer.cornerRadius = 10

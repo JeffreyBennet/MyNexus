@@ -21,7 +21,7 @@ class PeopleViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.membersTableView.tableFooterView = UIView()
         self.tabBarController?.tabBar.isHidden = true
         /*refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -129,9 +129,10 @@ extension PeopleViewController  {
             let fullNameArr = fullName.components(separatedBy: " ")
 
             let name    = fullNameArr[0]
-            let surname = fullNameArr[1]
+            
             cell.two.text = ""
             if fullNameArr.count > 1{
+                let surname = fullNameArr[1]
                 let first3 = name.substring(to: name.index(name.startIndex, offsetBy: 1))
                 let first2 = surname.substring(to: surname.index(surname.startIndex, offsetBy: 1))
                 cell.two.text = first3 + first2

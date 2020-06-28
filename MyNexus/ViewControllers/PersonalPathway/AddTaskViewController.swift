@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-class AddTaskViewController: UIViewController, UITextFieldDelegate {
+class AddTaskViewController: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate {
     let formatter = DateFormatter()
     @IBOutlet weak var error: UILabel!
     let db = Firestore.firestore()
@@ -21,6 +21,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dueDateTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.delegate = self
         nameTextField.delegate = self
          descTextField.delegate = self
         dueDateTextField.delegate = self
@@ -69,6 +70,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
              }
              }
              else {
+            error.text = "Please fill in required fields"
                  error.alpha = 1
              }
     }
@@ -85,7 +87,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "MM/dd/yyyy E"
         dates = dateFormatter1.string(from: datePicker.date)
-        dateFormatter.dateFormat = "MM/dd/yyyyE"
+        dateFormatter.dateFormat = "MM/dd/yyyy E"
         dueDateTextField.text = dateFormatter.string(from: datePicker.date)
        
         

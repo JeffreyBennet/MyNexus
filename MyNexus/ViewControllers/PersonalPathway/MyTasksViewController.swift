@@ -25,6 +25,7 @@ class MyTasksViewController: UIViewController, UIViewControllerTransitioningDele
 var dates = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.taskTableView.tableFooterView = UIView()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         formatter.dateFormat = "MM/dd/YYYY E"
         dates = formatter.string(from: date)
@@ -53,13 +54,11 @@ var dates = ""
             self.task = []
             if querySnapshot!.documents.count == 0{
                            print("iygededuy")
-               // self.firstView.alpha = 1
-             // self.firstLabel.alpha = 1
+                self.taskTableView.alpha = 0
                            
                        }
             else{
-              //  self.firstView.alpha = 0
-               // self.firstLabel.alpha = 0
+              self.taskTableView.alpha = 1
             }
            if let snapshot = querySnapshot?.documents{
             
@@ -146,10 +145,21 @@ var dates = ""
              return UISwipeActionsConfiguration(actions:[delete,edit, complete])
          
      }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+           let tabBarIndex = tabBarController.selectedIndex
+           if tabBarIndex == 1 {
+            loadData()
+           }
+      }
     func deleteRow(index: IndexPath){
         let t = self.task[index.row]
         let id = t.docId
-        db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(id).delete()
+        Firestore.firestore().disableNetwork { (error) in
+            self.db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").document(id).delete()
+        }
+        Firestore.firestore().enableNetwork { (error) in
+        }
         task.remove(at: index.row)
          taskTableView.deleteRows(at: [index], with: UITableView.RowAnimation.automatic)
         if task.count == 0{

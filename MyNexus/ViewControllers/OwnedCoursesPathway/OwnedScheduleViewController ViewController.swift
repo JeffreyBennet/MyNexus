@@ -30,6 +30,7 @@ var nameText = ""
     @IBOutlet weak var scheduleNamelabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.assignmentTableView.tableFooterView = UIView()
         self.tabBarController?.tabBar.isHidden = true
          NotificationCenter.default.addObserver(self, selector: #selector(loadList2), name: NSNotification.Name(rawValue: "load2"), object: nil)
     formatter.dateFormat = "MM/dd/YYYY E"
@@ -67,8 +68,18 @@ var nameText = ""
         db.collection("Assignments").document(finalCode).collection("currentAssignments").whereField("DueDate", isGreaterThanOrEqualTo: dates).getDocuments(source: .cache){
             (querySnapshot, error) in
             self.task = []
+            if querySnapshot?.documents.count == 0{
+                self.assignmentTableView.alpha = 0
+            }
+                          else
+                          {
+                              self.assignmentTableView.alpha = 1
+                              
+                          }
             if let snapshot = querySnapshot?.documents{
+              
                 for doc in snapshot{
+                    
                     let data = doc.data()
                     if let title = data["AssignmentName"] as? String, let desc = data["AssignmentDesc"] as? String, let date = data["DueDate"] as? String{
                         let newAssignment = Assignments(assignmentName: title, assignmentDesc: desc, assignmentDate: date, docId: doc.documentID)
@@ -154,7 +165,7 @@ var nameText = ""
     
     
     @IBAction func addPressed(_ sender: UIButton) {
-         
+         performSegue(withIdentifier: "toAssign", sender: self)
     }
     
     

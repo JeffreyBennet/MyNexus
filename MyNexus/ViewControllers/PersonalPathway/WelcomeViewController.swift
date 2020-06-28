@@ -11,7 +11,7 @@ import FSCalendar
 import Firebase
 import UserNotifications
 
-class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate {
+class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate , UITabBarControllerDelegate{
     let transition = SlideinTransition()
     var topView: UIView?
     
@@ -36,14 +36,15 @@ class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         formatter.dateFormat = "MM/dd/YYYY E"
         dates = formatter.string(from: date)
         print(dates)
+        self.tabBarController?.delegate = self
         // calendar.layer.cornerRadius = 10
         calendar.delegate = self
-        
+        Constants.dates = dates
         taskTableView.delegate = self
         //taskTableView.layer.cornerRadius = 18
         taskTableView.dataSource = self
         taskTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-        
+       //  NotificationCenter.default.addObserver(self, selector: #selector(loadList4), name: NSNotification.Name(rawValue: "load10"), object: nil)
         if Constants.firstTimeNotifications{
             Constants.firstTimeNotifications = false
             let pushManager = PushNotificationManager()
@@ -58,7 +59,16 @@ class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulNotificationSetUp"), object: nil)
         
     }
-    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+           let tabBarIndex = tabBarController.selectedIndex
+           if tabBarIndex == 0 {
+            loadData(date: Constants.dates)
+           }
+      }
+  // @objc func loadList4()  {
+        //print(dates)
+  //  loadData(date: Constants.dates)
+   // }
     @objc func didSignIn()  {
         print("herrwfrfrefrete")
         if Constants.isNewDevice{
@@ -112,18 +122,19 @@ class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
             loadNewData()
         }
     }
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+     
+    
     
     func loadData(date: String){
         db.collection("tasks").document(Auth.auth().currentUser?.uid ?? "").collection("currentUser").whereField("Date", isEqualTo: dates).getDocuments(source: .cache){
             (querySnapshot, error) in
             self.task = []
             if querySnapshot!.documents.count == 0{
-                self.firstView.alpha = 1
+               print("ehfiehuifehifhieuhfu")
+                self.taskTableView.alpha = 0
             }
             else{
+                self.taskTableView.alpha = 1
                 self.firstView.alpha = 0
             }
             if let snapshot = querySnapshot?.documents{
@@ -131,6 +142,7 @@ class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
                 for doc in snapshot{
                     let data = doc.data()
                     print("efdewfewf")
+                    print(data)
                     if let title = data["Task Title"] as? String, let type = data["Type"] as? String, let desc = data["Task Description"] as? String, let date = data["Date"] as? String,  let c = data["Color"] as? String{
                         let newTask = Tasks(title: title, desc: desc, date: date, type: type, docId: doc.documentID, color: c)
                         
@@ -255,6 +267,7 @@ class WelcomeViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         formatter.dateFormat = "MM/dd/YYYY E"
         dates = formatter.string(from: date)
         print(dates)
+        Constants.dates = dates
         loadData(date: dates)
         
         

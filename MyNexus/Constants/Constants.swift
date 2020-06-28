@@ -11,6 +11,7 @@ import Foundation
 struct Constants {
     static var fcmToken = ""
     static var name = ""
+    static var dates = ""
     static var isNewDevice = false
     static var firstTimeAtWelcome = true
     static var firstTimeNotifications = true

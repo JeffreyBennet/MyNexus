@@ -60,12 +60,18 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate{
         else{
         if new1 == re1{
             Auth.auth().currentUser?.updatePassword(to: new1) { (error) in
-                
+                if let e = error{
+                    
+                    self.handleError(e)
+                    self.error1.alpha = 1
+                }
+                else{
             self.error1.text = "Password succesfully changed"
             self.error1.textColor = UIColor(named: "newBlue")
             self.new.text  = ""
             self.reType.text = ""
             self.error1.alpha = 1
+                }
                 
             }
         }
@@ -86,4 +92,16 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate{
     }
     */
 
+}
+
+extension ChangePasswordViewController{
+    func handleError(_ error: Error) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
+            print(errorCode.errorMessage)
+          
+            error1.text = errorCode.errorMessage
+
+
+        }
+    }
 }

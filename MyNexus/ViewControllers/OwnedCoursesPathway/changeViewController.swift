@@ -74,6 +74,8 @@ class changeViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func deletPressed(_ sender: UIButton) {
         db.collection("Assignments").document(finalCode1).collection("currentAssignments").document(docId).delete()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load2"), object: nil)
+        self.dismiss(animated: true, completion: nil)
         self.db.collection("Classes").document(self.finalCode1).collection("JoinedUsers").getDocuments(source: .cache){
                     (querySnapshot, error) in
                      if let snapshot = querySnapshot?.documents{
@@ -82,8 +84,7 @@ class changeViewController: UIViewController, UITextFieldDelegate  {
                                  if let fcm = data["fcmToken"] as? String{
                                      let uid = doc.documentID
                                     self.db.collection("tasks").document(uid).collection("currentUser").document(self.docId).setData(["TimeStamp": "Deleted"], merge: true )
-                                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load2"), object: nil)
-                                          self.dismiss(animated: true, completion: nil)
+                                     
                                                     }
                                                 }
                                             }
